@@ -9,10 +9,9 @@ def get_integer_input() -> int:
     """
     while True:
         try:
-            """ Ask user for an integer input """
+            # Ask user for an integer input
             number = int(input("Enter an integer: "))
-                return number
-            print("Please enter interger.)
+            return number
         except ValueError:
             print("Invalid input. Please enter a valid integer.")
 
@@ -28,18 +27,15 @@ def check_even_odd(number: int) -> str:
     Returns:
         str: A message saying if the number is "Even" or "Odd".
     """
-
     if number % 2 == 0:
         return f"{number} is an Even number."
-
     return f"{number} is an Odd number."
 
 def main():
     """
     Main program that gets a number and checks if it's even or odd.
     """
-    
-    """Get an integer from the user."""
+    """Get an integer from the user"""
     integer_number = get_integer_input()
     
     """Check if the number is even or odd"""
