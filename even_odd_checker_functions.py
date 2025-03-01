@@ -40,10 +40,10 @@ def main():
     """
     
     """Get an integer from the user."""
-    number = get_integer_input()
+    integer_number = get_integer_input()
     
     """Check if the number is even or odd"""
-    result = check_even_odd(number)
+    result = check_even_odd(integer_number)
     
     """Output the result"""
     print(result)
