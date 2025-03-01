@@ -1,48 +1,28 @@
+# Function to get integer input from the user
 def get_integer_input() -> int:
-    """
-    Asks the user to enter a number and gives back the number.
-    
-    If the input is not a number, it will keep asking until a valid number is entered.
-    
-    Returns:
-        int: The number the user enters.
-    """
+    """Prompts the user to enter an integer and returns the integer."""
     while True:
         try:
-            # Ask user for an integer input
+            # Ask the user for an integer
             number = int(input("Enter an integer: "))
-            return number
+            return number  # Return the valid integer input
         except ValueError:
             print("Invalid input. Please enter a valid integer.")
 
+# Function to check if a number is even or odd
 def check_even_odd(number: int) -> str:
-    """
-    Checks if the number is even or odd.
-    
-    Uses division to check if the number is divisible by 2.
-    
-    Args:
-        number (int): The number to check.
-    
-    Returns:
-        str: A message saying if the number is "Even" or "Odd".
-    """
+    """Returns a formatted message indicating whether the number is even or odd."""
     if number % 2 == 0:
         return f"{number} is an Even number."
-    return f"{number} is an Odd number."
+    else:
+        return f"{number} is an Odd number."
 
+# Main program flow
 def main():
-    """
-    Main program that gets a number and checks if it's even or odd.
-    """
-    """Get an integer from the user"""
-    integer_number = get_integer_input()
-    
-    """Check if the number is even or odd"""
-    result = check_even_odd(integer_number)
-    
-    """Output the result"""
-    print(result)
+    number = get_integer_input()  # Get a valid integer from the user
+    result = check_even_odd(number)  # Check if the number is even or odd
+    print(result)  # Display the result
 
+# Run the program
 if __name__ == "__main__":
     main()
