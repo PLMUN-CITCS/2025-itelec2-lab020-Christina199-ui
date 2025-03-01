@@ -30,10 +30,9 @@ def check_even_odd(number: int) -> str:
     else:
         return f"{number} is an Odd number."  # If number has a remainder of 1 when divided by 2
 
-def main()
-    """
-    Asks the user for a score, determines the grade, and shows the outcome.
-    """
+# Main program
+if __name__ == "__main__":
+    # Get the integer input from the user
     number = get_integer_input()  # Calling the function to get valid integer input
     
     # Determine if the number is even or odd
@@ -41,6 +40,3 @@ def main()
     
     # Display the result to the user
     print(result)  # Printing the result (either "Even" or "Odd")
-    
-if __name__ == "__main__":
-    main()  # Calling the main function to start the program
