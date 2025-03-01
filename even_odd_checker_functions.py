@@ -3,28 +3,24 @@ def get_integer_input() -> int:
     """Prompts the user to enter an integer and returns the integer."""
     while True:
         try:
-            number = int(input("Enter an integer: "))
-            return number  # Return the valid integer input
+            number = int(input("Enter an integer: "))  # Read and convert input to integer
+            return number  # Return the valid integer
         except ValueError:
-            print("Invalid input. Please enter a valid integer.")
+            print("Invalid input. Please enter a valid integer.")  # Handle invalid input
 
-# Function to check if a number is prime
-def check_prime(number: int) -> bool:
-    """Returns True if the number is prime, otherwise False."""
-    if number <= 1:
-        return False  # Numbers less than or equal to 1 are not prime
-    for i in range(2, int(number ** 0.5) + 1):  # Check divisibility up to square root of number
-        if number % i == 0:
-            return False  # Found a divisor, so the number is not prime
-    return True  # No divisors found, so the number is prime
+# Function to check if the number is even or odd
+def check_even_odd(number: int) -> str:
+    """Returns a message indicating if the number is even or odd."""
+    if number % 2 == 0:
+        return f"{number} is an Even number."  # Number is even
+    else:
+        return f"{number} is an Odd number."   # Number is odd
 
 # Main program flow
 def main():
     number = get_integer_input()  # Get a valid integer from the user
-    if check_prime(number):
-        print(f"{number} is a Prime number.")
-    else:
-        print(f"{number} is not a Prime number.")
+    result = check_even_odd(number)  # Check if the number is even or odd
+    print(result)  # Print the result
 
 # Run the program
 if __name__ == "__main__":
